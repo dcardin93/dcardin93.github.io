@@ -250,6 +250,7 @@ function Buscar () {
 	}
 }
 function RemoveChilds() {
+	alert('A limpiar')
 	var list = document.getElementById('DivDatos');
 	while (list.hasChildNodes()) {   
     		list.removeChild(list.firstChild);
