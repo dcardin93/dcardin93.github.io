@@ -203,24 +203,48 @@ function SaveTime() {
 
 function Buscar () {
 	var asig = document.getElementById('AsigBus');
-	var dia = document.getElementById('Días');
+	var dia = document.getElementById('Dias');
+	var vuelt = document.getElementById('VueltaBus')
 	if (dia.value == 0) {
 		if (asig.value == 0) {
-			alert('Seleccione día y/o asignatura');
+			if(vuelt.value == 0) {
+				alert('Seleccione vuelta, dia y/o asignatura');
+			}
+			else {
+				alert('Vuelta');
+				OnlyVuelta(this);
+			}	
 		}
 		else {
-			alert('Asig')
-			OnlyAsig(this);
+			if(vuelt.value == 0){
+				alert('Asignatura');
+				OnlyAsig(this);
+			}
+			else {
+				alert('Asignatura y Vuelta');
+				AsigYVuelta(this);
 		}
 	}
 	else {
 		if (asig.value == 0) {
-			alert('day')
-			OnlyDay(this);
+			if(vuelt.value == 0) {
+				alert('Dia');
+				OnlyDia(this);
+			}
+			else {
+				alert('Dia y Vuelta');
+				DiaYVuelta(this);
+			}
 		}
 		else {
-			alert('both')
-			Both(this);
+			if(vuelt.value == 0) {
+				alert('Dia y Asignatura');
+				DiaYAsig(this);
+			}
+			else {
+				alert('Todo');
+				AllThings(this);
+			}
 		}
 	}
 }
