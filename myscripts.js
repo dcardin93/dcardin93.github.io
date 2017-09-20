@@ -202,6 +202,7 @@ function SaveTime() {
 }
 
 function Buscar () {
+	RemoveChilds(this);
 	var asig = document.getElementById('AsigBus');
 	var dia = document.getElementById('Dias');
 	var vuelt = document.getElementById('VueltaBus')
@@ -218,8 +219,7 @@ function Buscar () {
 		else {
 			if(vuelt.value == 0){
 				alert('Asignatura');
-				alert('hello')
-				RemoveChilds(this);
+				alert('hello');
 				var asig = document.getElementById('AsigBus');
 				var datos = document.getElementById('DivDatos');
 				var tablaorden = document.createElement("table");
