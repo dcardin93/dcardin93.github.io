@@ -49,16 +49,28 @@ function start() {
 		var datostabla = document.createElement("table");
 		var datoshilera = document.createElement("tr");	
 		var datosdia = document.createTextNode("Día");
+		var datosvuelta = document.createTextNode("Vuelta");
 		var datosasig = document.createTextNode("Asignatura");			
-		var datostiempo = document.createTextNode("Tiempo");		
+		var datostiempo = document.createTextNode("Tiempo");
 		var datoscelda = document.createElement("td");
-		datoscelda.appendChild(datosdia);
+		var b = document.createElement("b");
+		b.appendChild(datosdia);
+		datoscelda.appendChild(b);
 		datoshilera.appendChild(datoscelda);
 		var datoscelda = document.createElement("td");
-		datoscelda.appendChild(datosasig);
+		var b = document.createElement("b");
+		b.appendChild(datosvuelta);
+		datoscelda.appendChild(b);
 		datoshilera.appendChild(datoscelda);
 		var datoscelda = document.createElement("td");
-		datoscelda.appendChild(datostiempo);
+		var b = document.createElement("b");
+		b.appendChild(datosasig);
+		datoscelda.appendChild(b);
+		datoshilera.appendChild(datoscelda);
+		var datoscelda = document.createElement("td");
+		var b = document.createElement("b");
+		b.appendChild(datostiempo);
+		datoscelda.appendChild(b);
 		datoshilera.appendChild(datoscelda);
 		datostabla.appendChild(datoshilera);
 		datostabla.setAttribute("border","3");
@@ -73,15 +85,17 @@ function LoadData() {
 	var datosimp = localStorage.getItem("datos");
 	var datostabla = document.createElement("table");
 	var datarray = datosimp.split("-");
-	var rep = (datarray.length/3);
+	var rep = (datarray.length/4);
 	for (i = 0; i < rep; i++) {
 		var datoshilera = document.createElement("tr");
-		var k1 = 0 + (3*i);
+		var k1 = 0 + (4*i);
 		var k1 = Number(k1);
-		var k2 = 1 + (3*i);
+		var k2 = 1 + (4*i);
 		var k2 = Number(k2);
-		var k3 = 2 + (3*i);
+		var k3 = 2 + (4*i);
 		var k3 = Number(k3);
+		var k4 = 3 + (4*i);
+		var k4 = Number(k4);
 		var datoscelda = document.createElement("td");
 		var datos1 = datarray[k1];
 		datoscelda.appendChild(document.createTextNode(datos1));
@@ -93,6 +107,10 @@ function LoadData() {
 		var datoscelda = document.createElement("td");
 		var datos3 = datarray[k3];
 		datoscelda.appendChild(document.createTextNode(datos3));
+		datoshilera.appendChild(datoscelda);
+		var datoscelda = document.createElement("td");
+		var datos4 = datarray[k4];
+		datoscelda.appendChild(document.createTextNode(datos4));
 		datoshilera.appendChild(datoscelda);
 		datostabla.appendChild(datoshilera);		
 	}
@@ -106,7 +124,7 @@ function SaveData () {
 	var tabladat = document.getElementById('tabladatos');
 	var fil = tabladat.rows.length;
 	var filas = tabladat.rows.length + 1;
-	var cols = 3;
+	var cols = 4;
 	var i = 0;
 	var j = 0;
 	var k = 1;
@@ -122,7 +140,8 @@ function SaveData () {
 }
 
 function SaveTime() {
-	var lista = document.getElementById('Asig')
+	var lista = document.getElementById('Asig');
+	var vuelta = document.getElementById('Vuelta');
 	if (lista.value == 0){
 		alert("No has seleccionado una asignatura");
 	}
@@ -172,6 +191,9 @@ function SaveTime() {
 		var hilera = document.createElement("tr");
 		var celda = document.createElement("td");
 		celda.appendChild(document.createTextNode(ahora));
+		hilera.appendChild(celda);
+		var celda = document.createElement("td");
+		celda.appendChild(document.createTextNode(vuelta.value));
 		hilera.appendChild(celda);
 		var celda = document.createElement("td");
 		celda.appendChild(document.createTextNode(lista.value));
