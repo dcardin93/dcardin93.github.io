@@ -201,6 +201,15 @@ function SaveTime() {
 	}
 }
 
+function RemoveChilds() {
+	alert('A limpiar')
+	var list = document.getElementById('DivDatos');
+	while (list.hasChildNodes()) {   
+    		list.removeChild(list.firstChild);
+	}
+	alert('Limpio')
+}
+
 function Buscar () {
 	RemoveChilds(this);
 	var asig = document.getElementById('AsigBus');
@@ -219,7 +228,6 @@ function Buscar () {
 		else {
 			if(vuelt.value == 0){
 				alert('Asignatura');
-				alert('hello');
 				var asig = document.getElementById('AsigBus');
 				var datos = document.getElementById('DivDatos');
 				var tablaorden = document.createElement("table");
@@ -274,17 +282,4 @@ function Buscar () {
 			}
 		}
 	}
-}
-function RemoveChilds() {
-	alert('A limpiar')
-	var list = document.getElementById('DivDatos');
-	while (list.hasChildNodes()) {   
-    		list.removeChild(list.firstChild);
-	}
-	alert('Limpio')
-}
-
-
-function OnlyAsig() {
-	
 }
