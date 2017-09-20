@@ -218,7 +218,33 @@ function Buscar () {
 		else {
 			if(vuelt.value == 0){
 				alert('Asignatura');
-				OnlyAsig(this);
+				alert('hello')
+				RemoveChilds(this);
+				var asig = document.getElementById('AsigBus');
+				var datos = document.getElementById('DivDatos');
+				var tablaorden = document.createElement("table");
+				var value = asig.value;
+				var tabladat = document.getElementById('tabladatos');
+				var fil = tabladat.rows.length;
+				var filas = tabladat.rows.length + 1;
+				for (i = 0 ; i < filas ; i++) {
+					var data = tabladat.rows[i].cells[1].innerHTML;
+					var str1 = value.toString();
+					var str2 = data.toString();
+					if (str1 == str2){
+						alert('hi')
+						var hilera = document.createElement("tr");
+						var celda = document.createElement("td");
+						var dat1 = tabladat.rows[i].cells[0].innerHTML;
+						celda.appendChild(document.createTextNode('dat1'));
+						hilera.appendChild(celda);
+						tablaorden.appendChild(hilera);
+					} 
+				}
+				tablaorden.setAttribute("border","3");
+				tablaorden.setAttribute("id","orden");
+				tablaorden.setAttribute("class","tabla");
+				datos.appendChild(tablaorden);	
 			}
 			else {
 				alert('Asignatura y Vuelta');
@@ -260,31 +286,5 @@ function RemoveChilds() {
 
 
 function OnlyAsig() {
-	alert('hello')
-	RemoveChilds(this);
-	var asig = document.getElementById('AsigBus');
-	var datos = document.getElementById('DivDatos');
-	var tablaorden = document.createElement("table");
-	var value = asig.value;
-	var tabladat = document.getElementById('tabladatos');
-	var fil = tabladat.rows.length;
-	var filas = tabladat.rows.length + 1;
-	for (i = 0 ; i < filas ; i++) {
-		var data = tabladat.rows[i].cells[1].innerHTML;
-		var str1 = value.toString();
-		var str2 = data.toString();
-		if (str1 == str2){
-			alert('hi')
-			var hilera = document.createElement("tr");
-			var celda = document.createElement("td");
-			var dat1 = tabladat.rows[i].cells[0].innerHTML;
-			celda.appendChild(document.createTextNode('dat1'));
-			hilera.appendChild(celda);
-			tablaorden.appendChild(hilera);
-		} 
-	}
-	tablaorden.setAttribute("border","3");
-	tablaorden.setAttribute("id","orden");
-	tablaorden.setAttribute("class","tabla");
-	datos.appendChild(tablaorden);	
+	
 }
