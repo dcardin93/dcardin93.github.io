@@ -260,6 +260,7 @@ function RemoveChilds() {
 
 
 function OnlyAsig() {
+	alert('hello')
 	RemoveChilds(this);
 	var asig = document.getElementById('AsigBus');
 	var datos = document.getElementById('DivDatos');
