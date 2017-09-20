@@ -243,8 +243,24 @@ function Buscar () {
 						alert('igual')
 						var hilera = document.createElement("tr");
 						var celda = document.createElement("td");
-						var dat1 = tabladat.rows[i].cells[0].innerHTML;
-						var name = document.createTextNode(dat1)
+						var data0 = tabladat.rows[i].cells[0].innerHTML;
+						var dat0 = data0.toString();
+						var name0 = document.createTextNode(dat0);
+						celda.appendChild(name0);
+						hilera.appendChild(celda);
+						var data1 = tabladat.rows[i].cells[1].innerHTML;
+						var dat1 = data1.toString();
+						var name1 = document.createTextNode(dat1);
+						celda.appendChild(name1);
+						hilera.appendChild(celda);
+						var data2 = tabladat.rows[i].cells[2].innerHTML;
+						var dat2 = data2.toString();
+						var name2 = document.createTextNode(dat2);
+						celda.appendChild(name2);
+						hilera.appendChild(celda);
+						var data3 = tabladat.rows[i].cells[3].innerHTML;
+						var dat3 = data3.toString();
+						var name = document.createTextNode(dat3);
 						celda.appendChild(name);
 						hilera.appendChild(celda);
 						tablaorden.appendChild(hilera);
