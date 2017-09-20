@@ -170,9 +170,15 @@ html {
 
 <div class="pagina" id="Page4" style="display:none">
 
-<h2>Selecciona el dia y la asignatura</h2>
+<h2>Selecciona la vuelta, el dia y la asignatura</h2>
 
-<select id="AsigBus" name="AsigBus">
+<select class="lista" id="VueltaBus" name="VueltaBus">
+   <option value="1">Vuelta 1</option>
+   <option value="2">Vuelta 2</option>
+   <option value="3">Vuelta 3</option>
+</select>	
+	
+<select class='lista' id="AsigBus" name="AsigBus">
    <option selected value="0">Elige una asignatura</option>
    <option value="Anatomia">Anatomia</option>
    <option value="Anatomia Patologica">Anatomia Patologica</option> 
@@ -210,7 +216,7 @@ html {
    <option value="Urgencias">Urgencias</option> 
 </select>
 
-<select id='Dias' name="Dias">
+<select class='lista' id='Dias' name="Dias">
    <option selected value="0">Elige un dia </option>
 </select>
 
