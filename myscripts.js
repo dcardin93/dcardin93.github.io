@@ -202,12 +202,10 @@ function SaveTime() {
 }
 
 function RemoveChilds() {
-	alert('A limpiar')
 	var list = document.getElementById('DivDatos');
 	while (list.hasChildNodes()) {   
     		list.removeChild(list.firstChild);
 	}
-	alert('Limpio')
 }
 
 function Buscar () {
@@ -240,11 +238,12 @@ function Buscar () {
 					var str1 = value.toString();
 					var str2 = data.toString();
 					if (str1 == str2){
-						alert('hi')
+						alert('igual')
 						var hilera = document.createElement("tr");
 						var celda = document.createElement("td");
 						var dat1 = tabladat.rows[i].cells[0].innerHTML;
-						celda.appendChild(document.createTextNode('dat1'));
+						var name = document.createTextNode(dat1)
+						celda.appendChild(name);
 						hilera.appendChild(celda);
 						tablaorden.appendChild(hilera);
 					} 
