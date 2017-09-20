@@ -249,16 +249,17 @@ function Buscar () {
 		}
 	}
 }
-function RemoveAsigChilds() {
+function RemoveChilds() {
 	var list = document.getElementById('DivDatos');
 	while (list.hasChildNodes()) {   
-    	list.removeChild(list.firstChild);
+    		list.removeChild(list.firstChild);
 	}
+	alert('Limpio')
 }
 
 
 function OnlyAsig() {
-	RemoveAsigChilds(this);
+	RemoveChilds(this);
 	var asig = document.getElementById('AsigBus');
 	var datos = document.getElementById('DivDatos');
 	var tablaorden = document.createElement("table");
