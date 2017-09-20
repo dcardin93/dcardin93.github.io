@@ -236,7 +236,9 @@ function Buscar () {
 				for (i = 0 ; i < filas ; i++) {
 					var data = tabladat.rows[i].cells[1].innerHTML;
 					var str1 = value.toString();
+					alert(str1)
 					var str2 = data.toString();
+					alert(str2)
 					if (str1 == str2){
 						alert('igual')
 						var hilera = document.createElement("tr");
