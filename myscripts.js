@@ -223,6 +223,7 @@ function Buscar () {
 			else {
 				alert('Asignatura y Vuelta');
 				AsigYVuelta(this);
+			}
 		}
 	}
 	else {
