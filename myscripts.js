@@ -234,7 +234,7 @@ function Buscar () {
 				var fil = tabladat.rows.length;
 				var filas = tabladat.rows.length + 1;
 				for (i = 0 ; i < filas ; i++) {
-					var data = tabladat.rows[i].cells[1].innerHTML;
+					var data = tabladat.rows[i].cells[2].innerHTML;
 					var str1 = value.toString();
 					alert(str1)
 					var str2 = data.toString();
