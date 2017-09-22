@@ -209,6 +209,26 @@ function RemoveChilds() {
 }
 
 function Buscar () {
+	var datos = document.getElementById('DivDatos');
+	var tablaorden = document.createElement("table");
+	var hilera = document.createElement("tr");
+        var celda = document.createElement("td");
+	var name0 = document.createTextNode('Dia');
+	celda.appendChild(name0);
+	hilera.appendChild(celda);
+	var celda = document.createElement("td");
+	var name1 = document.createTextNode('Vuelta');
+	celda.appendChild(name1);
+	hilera.appendChild(celda);
+	var celda = document.createElement("td");
+	var name2 = document.createTextNode('Asignatura');
+	celda.appendChild(name2);
+	hilera.appendChild(celda);
+	var celda = document.createElement("td");
+	var name3 = document.createTextNode('Tiempo');
+	celda.appendChild(name3);
+	hilera.appendChild(celda);
+	tablaorden.appendChild(hilera);
 	RemoveChilds(this);
 	var asig = document.getElementById('AsigBus');
 	var dia = document.getElementById('Dias');
@@ -226,9 +246,6 @@ function Buscar () {
 		else {
 			if(vuelt.value == 0){
 				alert('Asignatura');
-				var asig = document.getElementById('AsigBus');
-				var datos = document.getElementById('DivDatos');
-				var tablaorden = document.createElement("table");
 				var value = asig.value;
 				var tabladat = document.getElementById('tabladatos');
 				var fil = tabladat.rows.length;
@@ -265,15 +282,12 @@ function Buscar () {
 						var dat3 = data3.toString();
 						alert(dat3)
 						var name3 = document.createTextNode(dat3);
-						celda.appendChild(dat3);
+						celda.appendChild(name3);
 						hilera.appendChild(celda);
 						tablaorden.appendChild(hilera);
 					} 
 				}
-				tablaorden.setAttribute("border","3");
-				tablaorden.setAttribute("id","orden");
-				tablaorden.setAttribute("class","tabla");
-				datos.appendChild(tablaorden);	
+					
 			}
 			else {
 				alert('Asignatura y Vuelta');
@@ -303,4 +317,8 @@ function Buscar () {
 			}
 		}
 	}
+	tablaorden.setAttribute("border","3");
+	tablaorden.setAttribute("id","orden");
+	tablaorden.setAttribute("class","tabla");
+	datos.appendChild(tablaorden);
 }
