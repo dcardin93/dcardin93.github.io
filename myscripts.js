@@ -210,6 +210,7 @@ function RemoveChilds() {
 
 function Buscar () {
 	var datos = document.getElementById('DivDatos');
+	var tabladat = document.getElementById('tabladatos');
 	var tablaorden = document.createElement("table");
 	var hilera = document.createElement("tr");
         var celda = document.createElement("td");
@@ -247,7 +248,6 @@ function Buscar () {
 			if(vuelt.value == 0){
 				alert('Asignatura');
 				var value = asig.value;
-				var tabladat = document.getElementById('tabladatos');
 				var fil = tabladat.rows.length;
 				var filas = tabladat.rows.length + 1;
 				for (i = 0 ; i < filas ; i++) {
@@ -256,30 +256,35 @@ function Buscar () {
 					var str2 = data.toString();
 					if (str1 == str2) {
 						var hilera = document.createElement("tr");
+						
 						var celda = document.createElement("td");
 						var data0 = tabladat.rows[i].cells[0].innerHTML;
 						var dat0 = data0.toString();
 						var name0 = document.createTextNode(dat0);
 						celda.appendChild(name0);
 						hilera.appendChild(celda);
+						
 						var celda = document.createElement("td");
 						var data1 = tabladat.rows[i].cells[1].innerHTML;
-						var dat1 = data1.toString;
+						var dat1 = data1.toString();
 						var name1 = document.createTextNode(dat1);
 						celda.appendChild(dat1);
 						hilera.appendChild(celda);
+						
 						var celda = document.createElement("td");
 						var data2 = tabladat.rows[i].cells[2].innerHTML;
 						var dat2 = data2.toString();
 						var name2 = document.createTextNode(dat2);
 						celda.appendChild(dat2);
 						hilera.appendChild(celda);
+						
 						var celda = document.createElement("td");
 						var data3 = tabladat.rows[i].cells[3].innerHTML;
 						var dat3 = data3.toString();
 						var name3 = document.createTextNode(dat3);
 						celda.appendChild(name3);
 						hilera.appendChild(celda);
+						
 						tablaorden.appendChild(hilera);
 					} 
 				}
