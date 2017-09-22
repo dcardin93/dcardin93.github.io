@@ -259,29 +259,25 @@ function Buscar () {
 						var celda = document.createElement("td");
 						var data0 = tabladat.rows[i].cells[0].innerHTML;
 						var dat0 = data0.toString();
-						alert(dat0)
 						var name0 = document.createTextNode(dat0);
 						celda.appendChild(name0);
 						hilera.appendChild(celda);
 						var celda = document.createElement("td");
 						var data1 = tabladat.rows[i].cells[1].innerHTML;
-						var dat1 = data1.toString();
-						alert(dat1)
-						var name1 = document.createTextNode(dat1);
+						var dat1 = data1.toString;
+						var name1 = document.createTextNode(name1);
 						celda.appendChild(dat1);
 						hilera.appendChild(celda);
 						var celda = document.createElement("td");
 						var data2 = tabladat.rows[i].cells[2].innerHTML;
 						var dat2 = data2.toString();
-						alert(dat2)
-						var name2 = document.createTextNode(dat2);
+						var name2 = document.createTextNode(name2);
 						celda.appendChild(dat2);
 						hilera.appendChild(celda);
 						var celda = document.createElement("td");
 						var data3 = tabladat.rows[i].cells[3].innerHTML;
 						var dat3 = data3.toString();
-						alert(dat3)
-						var name3 = document.createTextNode(dat3);
+						var name3 = document.createTextNode(name3);
 						celda.appendChild(name3);
 						hilera.appendChild(celda);
 						tablaorden.appendChild(hilera);
