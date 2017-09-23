@@ -293,7 +293,8 @@ function Buscar () {
 						
 						tablaorden.appendChild(hilera);
 						alert('ok')
-						if (i = fil) {
+						if (i < filas) {
+						} else {
 							tablaorden.setAttribute("border","3");
 							tablaorden.setAttribute("id","orden");
 							tablaorden.setAttribute("class","tabla");
