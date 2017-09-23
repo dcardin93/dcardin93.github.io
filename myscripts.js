@@ -251,10 +251,12 @@ function Buscar () {
 				var fil = tabladat.rows.length;
 				var filas = tabladat.rows.length + 1;
 				for (i = 0 ; i < filas ; i++) {
+					alert(i)
 					var data = tabladat.rows[i].cells[2].innerHTML;
 					var str1 = value.toString();
 					var str2 = data.toString();
 					if (str1 == str2) {
+						alert(str1 + str2)
 						var hilera = document.createElement("tr");
 						
 						var celda = document.createElement("td");
