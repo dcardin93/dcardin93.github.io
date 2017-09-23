@@ -277,7 +277,7 @@ function Buscar () {
 						
 						var celda = document.createElement("td");
 						var data2 = tabladat.rows[i].cells[2].innerHTML;
-						var dat2 = data0.toString();
+						var dat2 = data2.toString();
 						var name2 = document.createTextNode(dat2);
 						celda.appendChild(name2);
 						hilera.appendChild(celda);
