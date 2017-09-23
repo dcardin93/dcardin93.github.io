@@ -249,6 +249,7 @@ function Buscar () {
 				alert('Asignatura');
 				var value = asig.value;
 				var fil = tabladat.rows.length;
+				alert(fil)
 				var filas = tabladat.rows.length + 1;
 				for (i = 0 ; i < filas ; i++) {
 					alert(i)
