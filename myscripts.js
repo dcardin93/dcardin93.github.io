@@ -329,4 +329,5 @@ function Buscar () {
 	tablaorden.setAttribute("id","orden");
 	tablaorden.setAttribute("class","tabla");
 	datos.appendChild(tablaorden);
+	alert('end')
 }
