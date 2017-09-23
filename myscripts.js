@@ -265,15 +265,15 @@ function Buscar () {
 						var name0 = document.createTextNode(dat0);
 						celda.appendChild(name0);
 						hilera.appendChild(celda);
-						alert(name0)
+						alert(dat0)
 						
 						var celda = document.createElement("td");
 						var data1 = tabladat.rows[i].cells[1].innerHTML;
 						var dat1 = data1.toString();
 						var name1 = document.createTextNode(dat1);
-						celda.appendChild(dat1);
+						celda.appendChild(name1);
 						hilera.appendChild(celda);
-						alert(name1)
+						alert(dat1)
 						
 						var celda = document.createElement("td");
 						var data2 = tabladat.rows[i].cells[2].innerHTML;
