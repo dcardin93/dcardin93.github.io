@@ -277,11 +277,11 @@ function Buscar () {
 						
 						var celda = document.createElement("td");
 						var data2 = tabladat.rows[i].cells[2].innerHTML;
-						var dat2 = data2.toString();
+						var dat2 = data0.toString();
 						var name2 = document.createTextNode(dat2);
-						celda.appendChild(dat2);
+						celda.appendChild(name2);
 						hilera.appendChild(celda);
-						alert(name2)
+						alert(dat2)
 						
 						var celda = document.createElement("td");
 						var data3 = tabladat.rows[i].cells[3].innerHTML;
@@ -289,7 +289,7 @@ function Buscar () {
 						var name3 = document.createTextNode(dat3);
 						celda.appendChild(name3);
 						hilera.appendChild(celda);
-						alert(name3)
+						alert(dat3)
 						
 						tablaorden.appendChild(hilera);
 						alert('ok')
