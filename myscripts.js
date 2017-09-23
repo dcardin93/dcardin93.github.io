@@ -245,7 +245,7 @@ function Buscar () {
 			}	
 		}
 		else {
-			if(vuelt.value == 0){
+			if(vuelt.value == 0) {
 				alert('Asignatura');
 				var value = asig.value;
 				var fil = tabladat.rows.length;
@@ -265,6 +265,7 @@ function Buscar () {
 						var name0 = document.createTextNode(dat0);
 						celda.appendChild(name0);
 						hilera.appendChild(celda);
+						alert(name0)
 						
 						var celda = document.createElement("td");
 						var data1 = tabladat.rows[i].cells[1].innerHTML;
@@ -272,6 +273,7 @@ function Buscar () {
 						var name1 = document.createTextNode(dat1);
 						celda.appendChild(dat1);
 						hilera.appendChild(celda);
+						alert(name1)
 						
 						var celda = document.createElement("td");
 						var data2 = tabladat.rows[i].cells[2].innerHTML;
@@ -279,6 +281,7 @@ function Buscar () {
 						var name2 = document.createTextNode(dat2);
 						celda.appendChild(dat2);
 						hilera.appendChild(celda);
+						alert(name2)
 						
 						var celda = document.createElement("td");
 						var data3 = tabladat.rows[i].cells[3].innerHTML;
@@ -286,8 +289,10 @@ function Buscar () {
 						var name3 = document.createTextNode(dat3);
 						celda.appendChild(name3);
 						hilera.appendChild(celda);
+						alert(name3)
 						
 						tablaorden.appendChild(hilera);
+						alert('ok')
 					} 
 				}
 					
