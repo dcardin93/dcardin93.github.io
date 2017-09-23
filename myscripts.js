@@ -293,6 +293,13 @@ function Buscar () {
 						
 						tablaorden.appendChild(hilera);
 						alert('ok')
+						if (i = fil) {
+							tablaorden.setAttribute("border","3");
+							tablaorden.setAttribute("id","orden");
+							tablaorden.setAttribute("class","tabla");
+							datos.appendChild(tablaorden);
+							alert('end')
+						}
 					} 
 				}
 					
@@ -325,9 +332,4 @@ function Buscar () {
 			}
 		}
 	}
-	tablaorden.setAttribute("border","3");
-	tablaorden.setAttribute("id","orden");
-	tablaorden.setAttribute("class","tabla");
-	datos.appendChild(tablaorden);
-	alert('end')
 }
