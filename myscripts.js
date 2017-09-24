@@ -293,15 +293,14 @@ function Buscar () {
 						alert(dat3)
 						
 						tablaorden.appendChild(hilera);
+						
 						alert('ok')
-						if (i < fil-1) {
-						} else {
-							tablaorden.setAttribute("border","3");
-							tablaorden.setAttribute("id","orden");
-							tablaorden.setAttribute("class","tabla");
-							datos.appendChild(tablaorden);
-							alert('end')
-						}
+						
+						tablaorden.setAttribute("border","3");
+						tablaorden.setAttribute("id","orden");
+						tablaorden.setAttribute("class","tabla");
+						datos.appendChild(tablaorden);
+						alert('end')
 					} 
 				}
 					
