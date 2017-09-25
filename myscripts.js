@@ -5,7 +5,6 @@ function show(shown, hidden) {
   return false;
 }
 
-
 var inicio=0;
 var timeout=0;
 var resglob;
@@ -77,27 +76,30 @@ function RemoveDays() {
 	while (list.hasChildNodes()) {   
     		list.removeChild(list.firstChild);
 	}
-	alert('vacio')
 }
 
 function LoadDays() {
-	alert('why?')
 	RemoveDays(this);
-	alert('hola')
-	var divi = document.getElementById('DiasBus')
-	var tabla = document.getElementById('DivTabla')
+	var divi = document.getElementById('DiasBus');
+	var tabla = document.getElementById('DivTabla');
+	var opcion1 = document.createElement('option');
+	var node1 = document.createTextNode('Elige un día');
+	opcion1.appendChild(node1);
+	tabla.appendChild(opcion1);
 	var filas = tabla.rows.length + 1;
 	for (i = 1 ; i < filas ; i++) {
-		var var1 = tabla.rows[i].cells[0].innerHTML.toString();
+		var var1 = tabla.rows[i].cells[0].innerHTML;
 		var arr1 = var1.split(" ");
-		var data1 = arr1[0];
-		var var0 = tabla.rows[i-1].cells[0].innerHTML.toString();
+		var data1 = arr1[0].toString();
+		alert(data1)
+		var var0 = tabla.rows[i-1].cells[0].innerHTML;
 		var arr0 = var0.split(" ");
-		var data0 = arr0[0];
+		var data0 = arr0[0].toString();
+		alert(data0)
 		if (data1 == data0) {
 		} else {
 			var opcion = document.createElement("option");
-			opcion.appendChild(data1);
+			opcion.appendChild(createTextNode(data1));
 			divi.appendChild(opcion);
 			alert(data1)
 		}
