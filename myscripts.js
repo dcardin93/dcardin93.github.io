@@ -112,6 +112,13 @@ function LoadData() {
 	pagina3.appendChild(datostabla);
 }
 
+function BorrarDatos () {
+    	var r = confirm("¿seguro que desea borrar todos los datos?");
+    	if (r == true) {
+        	localStorage.removeItem("datos");
+    	} 
+}
+
 function SaveData () {
 	var tabladat = document.getElementById('tabladatos');
 	var fil = tabladat.rows.length;
