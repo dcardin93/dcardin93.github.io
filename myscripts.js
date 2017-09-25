@@ -82,10 +82,11 @@ function RemoveDays() {
 
 function LoadDays() {
 	RemoveDays(this);
+	alert('hola')
 	var divi = document.getElementById('DiasBus')
 	var tabla = document.getElementById('DivTabla')
 	var filas = tabla.rows.length + 1;
-	for (i=1;i<filas;i++) {
+	for (i = 1 ; i < filas ; i++) {
 		var var1 = tabla.rows[i].cells[0].innerHTML.toString();
 		var arr1 = var1.split(" ");
 		var data1 = arr1[0];
