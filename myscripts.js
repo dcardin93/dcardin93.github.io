@@ -104,11 +104,12 @@ function LoadDays() {
 		var data0 = arr0[0].toString();
 		alert(data0)
 		if (data1 == data0) {
+			alert('no')
 		} else {
 			var opcion = document.createElement("option");
 			opcion.appendChild(createTextNode(data1));
 			divi.appendChild(opcion);
-			alert(data1)
+			alert('siii');
 		}
 	}
 }
