@@ -83,9 +83,10 @@ function LoadDays() {
 	RemoveDays(this);
 	var divi = document.getElementById('DiasBus');
 	var tabla = document.getElementById('DivTabla');
-	var opcion1 = document.createElement('option');
+	var opcion1 = document.createElement('option selected');
 	var node1 = document.createTextNode('Elige un día');
 	opcion1.appendChild(node1);
+	opcion1.setAttribute("value","0")
 	tabla.appendChild(opcion1);
 	var filas = tabla.rows.length + 1;
 	for (i = 1 ; i < filas ; i++) {
