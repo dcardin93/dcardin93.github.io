@@ -5,7 +5,6 @@ function show(shown, hidden) {
   return false;
 }
 
-
 var inicio=0;
 var timeout=0;
 var resglob;
