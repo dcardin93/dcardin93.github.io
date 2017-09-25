@@ -84,7 +84,7 @@ html {
 
 </head>
 
-<body onLoad="start(this)" onLoad="LoadDays(this)">
+<body onLoad="start(this)">
 
 <header>
 <h1>CronoMIR</h1>
@@ -162,7 +162,7 @@ html {
 <div id="DivTabla"></div>
 
 <button class="boton" align="center" onclick="return show('Page1','Page3');">Inicio</button>
-<button class="boton" align="center" onclick="return show('Page4','Page3');">Buscar datos</button>
+<button class="boton" align="center" onclick="return show('Page4','Page3');"  onclick="LoadDays()">Buscar datos</button>
 <button class="boton" align="center" onclick="BorrarDatos(this);">Borrar todas las estadísticas</button>
 
 </div>
