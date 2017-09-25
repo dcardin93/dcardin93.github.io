@@ -78,6 +78,7 @@ function RemoveDays() {
 	while (list.hasChildNodes()) {   
     		list.removeChild(list.firstChild);
 	}
+	alert('vacio')
 }
 
 function LoadDays() {
@@ -97,6 +98,7 @@ function LoadDays() {
 			var opcion = document.createElement("option");
 			opcion.appendChild(data1);
 			divi.appendChild(opcion);
+			alert(data1)
 		}
 	}
 }
