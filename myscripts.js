@@ -141,8 +141,16 @@ function SaveData () {
 function SaveTime() {
 	var lista = document.getElementById('Asig');
 	var vuelta = document.getElementById('Vuelta');
-	if (lista.value == 0){
-		alert("No has seleccionado una asignatura");
+	if (lista.value == 0 || vuelta.value == 0){
+		if (lista.value == 0 && vuelta.value == 0) {
+			alert("No has seleccionado ni asignatura ni vuelta");
+		} else {
+			if (lista.value == 0) {
+				alert("No has seleccionado una asignatura");
+			} else {
+				alert("No has seleccionado la vuelta");
+			}
+		}
 	}
 	else {
 		
