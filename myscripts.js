@@ -83,9 +83,8 @@ function LoadDays() {
 	var tabla = document.getElementById('DivTabla');
 	var opcion1 = document.createElement("option");
 	var node1 = document.createTextNode("Elige un día");
-	alert(node1)
 	opcion1.appendChild(node1);
-	opcion1.setAttribute("value","0")
+	opcion1.setAttribute("value","0");
 	tabla.appendChild(opcion1);
 	var filas = tabla.rows.length + 1;
 	alert(filas)
