@@ -5,8 +5,6 @@ function show(shown, hidden) {
   return false;
 }
 
-alert('1')
-
 var inicio=0;
 var timeout=0;
 var resglob;
@@ -42,6 +40,7 @@ function LeadingZero(Time) {
 }
 
 function start() {
+	alert('1');
 	if(localStorage.datos) {
 		LoadData(this);
 	}
