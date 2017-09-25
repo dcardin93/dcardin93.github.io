@@ -72,6 +72,34 @@ function start() {
 	}
 }
 
+function RemoveDays() {
+	var list = document.getElementById('DiasBus');
+	while (list.hasChildNodes()) {   
+    		list.removeChild(list.firstChild);
+	}
+}
+
+function LoadDays() {
+	RemoveDays(this);
+	var divi = document.getElementById('DiasBus')
+	var tabla = document.getElementById('DivTabla')
+	var filas = tabla.rows.length + 1;
+	for (i=1;i<filas;i++) {
+		var var1 = tabla.rows[i].cells[0].innerHTML.toString();
+		var arr1 = var1.split(" ");
+		var data1 = arr1[0];
+		var var0 = tabla.rows[i-1].cells[0].innerHTML.toString();
+		var arr0 = var0.split(" ");
+		var data0 = arr0[0];
+		if (data1 == data0) {
+		} else {
+			var opcion = document.createElement("option");
+			opcion.appendChild(data1);
+			divi.appendChild(opcion);
+		}
+	}
+}
+
 function LoadData() {
 	var pagina3 = document.getElementById('DivTabla');			
 	var datosimp = localStorage.getItem("datos");
