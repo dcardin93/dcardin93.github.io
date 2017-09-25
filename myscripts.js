@@ -87,7 +87,7 @@ function LoadDays() {
 	var node1 = document.createTextNode("Elige un día");
 	opcion1.appendChild(node1);
 	opcion1.setAttribute("value","0");
-	tabla.appendChild(opcion1);
+	opcion1.appendChild(opcion1);
 	divi.appendChild(tabla);
 	var filas = tabla.rows.length + 1;
 	for (i = 1 ; i < filas ; i++) {
@@ -100,7 +100,7 @@ function LoadDays() {
 		var arr0 = var0.split(" ");
 		var data0 = arr0[0].toString();
 		alert(data0)
-		if (data1 != data0) {
+		if (data1 == data0) {
 			alert('no')
 		} else {
 			var opcion = document.createElement("option");
