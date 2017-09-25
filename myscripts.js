@@ -39,8 +39,47 @@ function LeadingZero(Time) {
 	return (Time < 10) ? "0" + Time : + Time;
 }
 
+function RemoveDays() {
+	var list = document.getElementById('DiasBus');
+	while (list.hasChildNodes()) {   
+    		list.removeChild(list.firstChild);
+	}
+}
+
+function LoadDays() {
+	RemoveDays(this);
+	var divi = document.getElementById('DiasBus');
+	var sel = document.createElement("select");
+	var tabla = document.getElementById('tabladatos');
+	var opcion1 = document.createElement("option");
+	var node1 = document.createTextNode("Elige un día");
+	opcion1.appendChild(node1);
+	opcion1.setAttribute("value","0");
+	sel.appendChild(opcion1);
+	sel.setAttribute("class","lista");
+	sel.setAttribute("id","DiaBus");
+	divi.appendChild(sel);
+	var filas = tabla.rows.length + 1;
+	for (i = 1 ; i < filas ; i++) {
+		var var1 = tabla.rows[i].cells[0].innerHTML;
+		var arr1 = var1.split(" ");
+		var data1 = arr1[0].toString();
+		var var0 = tabla.rows[i-1].cells[0].innerHTML;
+		var arr0 = var0.split(" ");
+		var data0 = arr0[0].toString();
+		if (data1 == data0) {
+		} else {
+			var opcion = document.createElement("option");
+			var data = document.createTextNode(data1);
+			opcion.appendChild(data);
+			sel.appendChild(opcion);
+			divi.appendChild(sel);
+		}
+	}
+}
+
 function start() {
-	alert('1');
+	LoadDays(this);
 	if(localStorage.datos) {
 		LoadData(this);
 	}
@@ -69,48 +108,6 @@ function start() {
 		datostabla.setAttribute("id","tabladatos");
 		datostabla.setAttribute("class","tabla");
 		pagina3.appendChild(datostabla);
-	}
-}
-
-function RemoveDays() {
-	var list = document.getElementById('DiasBus');
-	while (list.hasChildNodes()) {   
-    		list.removeChild(list.firstChild);
-	}
-}
-
-function LoadDays() {
-	RemoveDays(this);
-	var divi = document.getElementById('DiasBus');
-	var sel = document.createElement("select");
-	var tabla = document.getElementById('tabladatos');
-	var opcion1 = document.createElement("option");
-	var node1 = document.createTextNode("Elige un día");
-	opcion1.appendChild(node1);
-	opcion1.setAttribute("value","0");
-	sel.appendChild(opcion1);
-	divi.appendChild(sel);
-	var filas = tabla.rows.length + 1;
-	for (i = 1 ; i < filas ; i++) {
-		alert(i)
-		var var1 = tabla.rows[i].cells[0].innerHTML;
-		var arr1 = var1.split(" ");
-		var data1 = arr1[0].toString();
-		alert(data1)
-		var var0 = tabla.rows[i-1].cells[0].innerHTML;
-		var arr0 = var0.split(" ");
-		var data0 = arr0[0].toString();
-		alert(data0)
-		if (data1 == data0) {
-			alert('no')
-		} else {
-			var opcion = document.createElement("option");
-			var data = document.createTextNode(data1);
-			opcion.appendChild(data);
-			sel.appendChild(opcion);
-			divi.appendChild(sel);
-			alert('siii');
-		}
 	}
 }
 
