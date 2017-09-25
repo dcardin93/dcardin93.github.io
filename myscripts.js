@@ -4,6 +4,7 @@ function show(shown, hidden) {
   document.getElementById(hidden).style.display='none';
   return false;
 }
+
 var inicio=0;
 var timeout=0;
 var resglob;
