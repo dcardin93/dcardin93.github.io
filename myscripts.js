@@ -80,6 +80,7 @@ function RemoveDays() {
 }
 
 function LoadDays() {
+	alert('why?')
 	RemoveDays(this);
 	alert('hola')
 	var divi = document.getElementById('DiasBus')
