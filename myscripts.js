@@ -104,7 +104,7 @@ function LoadDays() {
 			alert('no')
 		} else {
 			var opcion = document.createElement("option");
-			opcion.appendChild(createTextNode(data1));
+			opcion.appendChild(document.createTextNode(data1));
 			divi.appendChild(opcion);
 			alert('siii');
 		}
