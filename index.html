@@ -24,7 +24,7 @@
 .boton {
 	width: 10%;
 	text-align: center;
-	margin-left: 40%;
+	margin-left: 45%;
 	font-size: large;
 	font-size: 2.5vh;
 	font-family: verdana;
@@ -37,6 +37,7 @@
 }
 
 .tabla {
+	border-radius: 0.5px;
 	margin-top: 5%;
 	margin-bottom: 5%;
 	font-size: large;
@@ -154,12 +155,10 @@ html {
 
 <h3 id='crono'>00:00:00</h3>		
 
-<div class="botones">
 <input class="boton" type="button" align="center" value="Empezar" onclick="empezarDetener(this);">
 <input class="boton" type="button" align="center" value="Guardar datos" onclick="SaveTime(this);">
 <button class="boton" align="center" onclick="return show('Page1','Page2');">Inicio</button>
 <button class="boton" align="center" onclick="return show('Page3','Page2');">Estadisticas</button>
-</div>
 
 </div>
 
@@ -167,11 +166,9 @@ html {
 
 <div class="divtabla" id="DivTabla"></div>
 
-<div class="botones">
 <button class="boton" align="center" onclick="return show('Page1','Page3');">Inicio</button>
 <button class="boton" align="center" onclick="return show('Page4','Page3');">Buscar datos</button>
 <button class="boton" align="center" onclick="BorrarDatos(this);">Borrar todas las estadísticas</button>
-</div>
 
 </div>
 
@@ -230,11 +227,9 @@ html {
 
 <div id="DivDatos"></div>
 
-<div class="botones">
 <input class="boton" type="button" align="center" value="Buscar" onclick="Buscar(this);">
 <button class="boton" align="center" onclick="return show('Page1','Page4');">Inicio</button>
 <button class="boton" align="center" onclick="return show('Page3','Page4');">Estadisticas</button>
-</div>
 
 </div>
 
