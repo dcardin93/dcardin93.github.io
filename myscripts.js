@@ -86,13 +86,10 @@ function LoadDays() {
 	var opcion1 = document.createElement("option");
 	var node1 = document.createTextNode("Elige un día");
 	opcion1.appendChild(node1);
-	alert('aqui')
 	opcion1.setAttribute("value","0");
-	alert('22')
 	tabla.appendChild(opcion1);
-	alert('33')
+	divi.appendChild(tabla);
 	var filas = tabla.rows.length + 1;
-	alert(filas)
 	for (i = 1 ; i < filas ; i++) {
 		alert(i)
 		var var1 = tabla.rows[i].cells[0].innerHTML;
@@ -103,7 +100,7 @@ function LoadDays() {
 		var arr0 = var0.split(" ");
 		var data0 = arr0[0].toString();
 		alert(data0)
-		if (data1 == data0) {
+		if (data1 != data0) {
 			alert('no')
 		} else {
 			var opcion = document.createElement("option");
