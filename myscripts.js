@@ -82,13 +82,14 @@ function RemoveDays() {
 function LoadDays() {
 	RemoveDays(this);
 	var divi = document.getElementById('DiasBus');
+	var sel = document.crateElement("select");
 	var tabla = document.getElementById('tabladatos');
 	var opcion1 = document.createElement("option");
 	var node1 = document.createTextNode("Elige un día");
 	opcion1.appendChild(node1);
 	opcion1.setAttribute("value","0");
-	opcion1.appendChild(opcion1);
-	divi.appendChild(tabla);
+	sel.appendChild(opcion1);
+	divi.appendChild(sel);
 	var filas = tabla.rows.length + 1;
 	for (i = 1 ; i < filas ; i++) {
 		alert(i)
@@ -106,7 +107,8 @@ function LoadDays() {
 			var opcion = document.createElement("option");
 			var data = document.createTextNode(data1);
 			opcion.appendChild(data);
-			divi.appendChild(opcion);
+			sel.appendChild(opcion);
+			divi.appendChild(sel);
 			alert('siii');
 		}
 	}
