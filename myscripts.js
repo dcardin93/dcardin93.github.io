@@ -90,6 +90,7 @@ function LoadDays() {
 	tabla.appendChild(opcion1);
 	var filas = tabla.rows.length + 1;
 	for (i = 1 ; i < filas ; i++) {
+		alert(i)
 		var var1 = tabla.rows[i].cells[0].innerHTML;
 		var arr1 = var1.split(" ");
 		var data1 = arr1[0].toString();
