@@ -9,7 +9,7 @@ var inicio=0;
 var timeout=0;
 var resglob;
 
-function empezarDetener(elemento) {
+function empezarDetener(elemento){
 	if(timeout==0)
 	{
 		elemento.value = "Detener";
