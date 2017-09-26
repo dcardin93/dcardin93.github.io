@@ -510,7 +510,60 @@ function Buscar () {
 			}
 			else {
 				alert('Dia y Vuelta');
-				DiaYVuelta(this);
+				var value1 = dia.value;
+				var value2 = vuelt.value;
+				var fil = tabladat.rows.length
+				var filas = tabladat.rows.length + 1;
+				for (i = 0 ; i < filas ; i++) {
+					var data2 = tabladat.rows[i].cells[1].innerHTML;
+					var arr1 = value1.split(" ");
+					var data1 = arr1[0].toString();
+					var var0 = tabladat.rows[i].cells[0].innerHTML;
+					var arr0 = var0.split(" ");
+					var data0 = arr0[0].toString();
+					var str1 = data1.toString();
+					var str12 = value2.toString();
+					var str2 = data0.toString();
+					var str22 = data2.toString();
+					if (str1 == str2 && str12 == str22) {
+						var hilera = document.createElement("tr");
+						
+						var celda = document.createElement("td");
+						var data0 = tabladat.rows[i].cells[0].innerHTML;
+						var dat0 = data0.toString();
+						var name0 = document.createTextNode(dat0);
+						celda.appendChild(name0);
+						hilera.appendChild(celda);
+
+						var celda = document.createElement("td");
+						var data1 = tabladat.rows[i].cells[1].innerHTML;
+						var dat1 = data1.toString();
+						var name1 = document.createTextNode(dat1);
+						celda.appendChild(name1);
+						hilera.appendChild(celda);
+						
+						var celda = document.createElement("td");
+						var data2 = tabladat.rows[i].cells[2].innerHTML;
+						var dat2 = data2.toString();
+						var name2 = document.createTextNode(dat2);
+						celda.appendChild(name2);
+						hilera.appendChild(celda);
+												
+						var celda = document.createElement("td");
+						var data3 = tabladat.rows[i].cells[3].innerHTML;
+						var dat3 = data3.toString();
+						var name3 = document.createTextNode(dat3);
+						celda.appendChild(name3);
+						hilera.appendChild(celda);
+												
+						tablaorden.appendChild(hilera);
+							
+						tablaorden.setAttribute("border","3");
+						tablaorden.setAttribute("id","orden");
+						tablaorden.setAttribute("class","tabla");
+						datos.appendChild(tablaorden);
+					}
+				}
 			}
 		}
 		else {
