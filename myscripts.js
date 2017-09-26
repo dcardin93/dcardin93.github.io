@@ -332,9 +332,11 @@ function Buscar () {
 						var data3 = tabladat.rows[i].cells[3].innerHTML;
 						var dat3 = data3.toString();
 						var tiempo = tiempo + dat3;
+						
 						var msg = 'Llevas ' + tiempo + ' horas estudiando en la vuelta ' + str1;
 						document.getElementById('tiempodiv').innerHTML = msg
 						var name3 = document.createTextNode(dat3);
+						
 						celda.appendChild(name3);
 						hilera.appendChild(celda);
 						
