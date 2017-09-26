@@ -288,7 +288,7 @@ function Buscar () {
 	tablaorden.appendChild(hilera);
 	RemoveChilds(this);
 	var asig = document.getElementById('AsigBus');
-	var dia = document.getElementById('Dias');
+	var dia = document.getElementById('DiasBus');
 	var vuelt = document.getElementById('VueltaBus')
 	if (dia.value == 0) {
 		if (asig.value == 0) {
