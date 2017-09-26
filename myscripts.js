@@ -263,6 +263,7 @@ function RemoveChilds() {
 }
 
 function Buscar () {
+	var tiempo = 0;
 	var datos = document.getElementById('DivDatos');
 	var tabladat = document.getElementById('tabladatos');
 	var tablaorden = document.createElement("table");
@@ -299,7 +300,6 @@ function Buscar () {
 				var fil = tabladat.rows.length;
 				var filas = tabladat.rows.length + 1;
 				for (i = 0 ; i < filas ; i++) {
-					alert(i)
 					var data = tabladat.rows[i].cells[1].innerHTML;
 					var str1 = value.toString();
 					var str2 = data.toString();
@@ -330,6 +330,9 @@ function Buscar () {
 						var celda = document.createElement("td");
 						var data3 = tabladat.rows[i].cells[3].innerHTML;
 						var dat3 = data3.toString();
+						var tiempo = tiempo + dat3;
+						var msg = 'Llevas ' + tiempo + ' horas estudiando en la vuelta ' + str1;
+						document.getElementById(tiempodiv).innerHTML = msg
 						var name3 = document.createTextNode(dat3);
 						celda.appendChild(name3);
 						hilera.appendChild(celda);
@@ -382,6 +385,7 @@ function Buscar () {
 						var celda = document.createElement("td");
 						var data3 = tabladat.rows[i].cells[3].innerHTML;
 						var dat3 = data3.toString();
+						vat tiempo = tiempo + dat3;
 						var name3 = document.createTextNode(dat3);
 						celda.appendChild(name3);
 						hilera.appendChild(celda);
@@ -436,6 +440,7 @@ function Buscar () {
 						var celda = document.createElement("td");
 						var data3 = tabladat.rows[i].cells[3].innerHTML;
 						var dat3 = data3.toString();
+						vat tiempo = tiempo + dat3;
 						var name3 = document.createTextNode(dat3);
 						celda.appendChild(name3);
 						hilera.appendChild(celda);
