@@ -80,7 +80,6 @@ function LoadDays() {
 }
 
 function start() {
-	alert('1')
 	if(localStorage.datos) {
 		LoadData(this);
 	}
