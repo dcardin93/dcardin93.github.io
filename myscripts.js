@@ -263,8 +263,22 @@ function RemoveChilds() {
 	}
 }
 
-function Buscar () {
+function SumaTiempo() {
+	alert('34')
 	var tiempo = 0;
+	var datos = document.getElementById('tablaorden');
+	var filas = datos.rows.length + 1;
+	for (i = 0 ; i < filas ; i++) {
+		var crono = datos.rows[i].cells[3].innerHTML
+		var arr1 = crono.split(" ");
+		var data1 = arr1[0].toString();
+		tiempo = tiempo + data1;
+		alert('tiempo')
+	}
+}
+		 
+
+function Buscar () {
 	var datos = document.getElementById('DivDatos');
 	var tabladat = document.getElementById('tabladatos');
 	var tablaorden = document.createElement("table");
@@ -286,6 +300,7 @@ function Buscar () {
 	celda.appendChild(name3);
 	hilera.appendChild(celda);
 	tablaorden.appendChild(hilera);
+	tablaorden.setAttribute("id","tablaorden");
 	RemoveChilds(this);
 	var asig = document.getElementById('AsigBus');
 	var dia = document.getElementById('DiaBus');
@@ -343,11 +358,7 @@ function Buscar () {
 						tablaorden.setAttribute("class","tabla");
 						datos.appendChild(tablaorden);
 						
-						tiempo = tiempo + dat3;
-						var msg = 'Llevas ' + tiempo + ' horas estudiando en la vuelta ' + str1;
-						document.getElementById('tiempodiv').innerHTML = msg
-						
-						
+						SumaTiempo(this);
 					} 
 				}
 			}	
