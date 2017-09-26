@@ -262,23 +262,6 @@ function RemoveChilds() {
 	}
 }
 
-function SumaTiempo() {
-	alert('34')
-	var tiempo = 0;
-	var datos = document.getElementById('tablaorden');
-	var filas = datos.rows.length + 1;
-	alert('fin')
-	for (i = 0 ; i < filas ; i++) {
-		alert('1')
-		var crono = datos.rows[i].cells[3].innerHTML
-		var arr1 = crono.split(" ");
-		var data1 = arr1[0].toString();
-		tiempo = tiempo + data1;
-		alert('tiempo')
-	}
-}
-		 
-
 function Buscar () {
 	var datos = document.getElementById('DivDatos');
 	var tabladat = document.getElementById('tabladatos');
@@ -358,8 +341,6 @@ function Buscar () {
 						tablaorden.setAttribute("id","orden");
 						tablaorden.setAttribute("class","tabla");
 						datos.appendChild(tablaorden);
-						
-						SumaTiempo(this);
 					} 
 				}
 			}	
