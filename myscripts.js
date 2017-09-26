@@ -113,7 +113,6 @@ function start() {
 }
 
 function LoadData() {
-	LoadDays(this);
 	var pagina3 = document.getElementById('DivTabla');			
 	var datosimp = localStorage.getItem("datos");
 	var datostabla = document.createElement("table");
