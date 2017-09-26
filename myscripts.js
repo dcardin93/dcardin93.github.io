@@ -80,7 +80,7 @@ function LoadDays() {
 }
 
 function start() {
-	LoadDays(this);
+	alert('1')
 	if(localStorage.datos) {
 		LoadData(this);
 	}
@@ -109,6 +109,7 @@ function start() {
 		datostabla.setAttribute("id","tabladatos");
 		datostabla.setAttribute("class","tabla");
 		pagina3.appendChild(datostabla);
+		LoadDays(this);
 	}
 }
 
