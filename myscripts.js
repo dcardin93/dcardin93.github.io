@@ -109,11 +109,11 @@ function start() {
 		datostabla.setAttribute("id","tabladatos");
 		datostabla.setAttribute("class","tabla");
 		pagina3.appendChild(datostabla);
-		LoadDays(this);
 	}
 }
 
 function LoadData() {
+	LoadDays(this);
 	var pagina3 = document.getElementById('DivTabla');			
 	var datosimp = localStorage.getItem("datos");
 	var datostabla = document.createElement("table");
