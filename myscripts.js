@@ -81,6 +81,7 @@ function LoadDays() {
 }
 
 function start() {
+	alert('pene')
 	if(localStorage.datos) {
 		LoadData(this);
 	}
