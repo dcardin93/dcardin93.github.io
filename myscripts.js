@@ -385,7 +385,11 @@ function Buscar () {
 						var celda = document.createElement("td");
 						var data3 = tabladat.rows[i].cells[3].innerHTML;
 						var dat3 = data3.toString();
-						vat tiempo = tiempo + dat3;
+						
+						var tiempo = tiempo + dat3;
+						var msg = 'Llevas ' + tiempo + ' horas estudiando ' + str1;
+						document.getElementById(tiempodiv).innerHTML = msg
+						
 						var name3 = document.createTextNode(dat3);
 						celda.appendChild(name3);
 						hilera.appendChild(celda);
@@ -440,7 +444,11 @@ function Buscar () {
 						var celda = document.createElement("td");
 						var data3 = tabladat.rows[i].cells[3].innerHTML;
 						var dat3 = data3.toString();
-						vat tiempo = tiempo + dat3;
+				
+						var tiempo = tiempo + dat3;
+						var msg = 'Llevas ' + tiempo + ' horas estudiando ' + str1 + ' en la vuelta ' + str12;
+						document.getElementById(tiempodiv).innerHTML = msg
+						
 						var name3 = document.createTextNode(dat3);
 						celda.appendChild(name3);
 						hilera.appendChild(celda);
