@@ -49,7 +49,7 @@ function RemoveDays() {
 
 function LoadDays() {
 	RemoveDays(this);
-	var divi = document.getElementById('DiasBus');
+	var divi = document.getElementById('DiasDiv');
 	var sel = document.createElement("select");
 	var tabla = document.getElementById('tabladatos');
 	var opcion1 = document.createElement("option");
