@@ -80,7 +80,7 @@ function LoadDays() {
 }
 
 function start() {
-	alert('2585')
+	alert('8888')
 	if(localStorage.datos) {
 		LoadData(this);
 	}
@@ -331,12 +331,8 @@ function Buscar () {
 						var celda = document.createElement("td");
 						var data3 = tabladat.rows[i].cells[3].innerHTML;
 						var dat3 = data3.toString();
-						var tiempo = tiempo + dat3;
-						
-						var msg = 'Llevas ' + tiempo + ' horas estudiando en la vuelta ' + str1;
-						document.getElementById('tiempodiv').innerHTML = msg
 						var name3 = document.createTextNode(dat3);
-						
+
 						celda.appendChild(name3);
 						hilera.appendChild(celda);
 						
@@ -346,6 +342,12 @@ function Buscar () {
 						tablaorden.setAttribute("id","orden");
 						tablaorden.setAttribute("class","tabla");
 						datos.appendChild(tablaorden);
+						
+						tiempo = tiempo + dat3;
+						var msg = 'Llevas ' + tiempo + ' horas estudiando en la vuelta ' + str1;
+						document.getElementById('tiempodiv').innerHTML = msg
+						
+						
 					} 
 				}
 			}	
