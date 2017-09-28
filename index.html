@@ -6,6 +6,11 @@
 <script src="myscripts.js"></script>
 	
 <style>
+	
+input, label {
+    float:left;
+    margin:5px;
+}
 
 .pagina {
 	margin:0px;
@@ -276,7 +281,14 @@ html {
    <option value="Urgencias">Urgencias</option>
 </select>
 
-<button class="boton" align="center" onclick="IntDatos(this)">Inicio</button>
+<label>E-Mail:</label>
+<input type="text" name="id" maxlength="30" value="" />
+<label>Password:</label> 
+<input type="text" name="pw" maxlength="30" value="" />
+
+<input type="submit" name="submit" value="Login" />	
+
+<button class="boton" align="center" onclick="IntDatos(this)">Introducir datos</button>
 <button class="boton" align="center" onclick="return show('Page3','Page5');">Volver</button>
 
 </div>
