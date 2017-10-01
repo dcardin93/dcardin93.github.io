@@ -266,7 +266,7 @@ function RemoveChilds() {
 function IntDatos() {
 	var div = document.getElementById('DatosInt');
 	var tiempo = div.getElementsByTagName('input');
-	alert(tiempo[0].innerHTML)
+	alert(tiempo[0].value)
 }
 
 function Buscar () {
