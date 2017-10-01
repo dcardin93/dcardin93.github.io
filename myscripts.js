@@ -262,6 +262,12 @@ function RemoveChilds() {
 	}
 }
 
+function IntDatos() {
+	var div = document.getElementById('DatosInt');
+	var tiempo = div.getElementsByTagName('input');
+	alert(tiempo[0].innerHTML)
+}
+
 function Buscar () {
 	var datos = document.getElementById('DivDatos');
 	var tabladat = document.getElementById('tabladatos');
