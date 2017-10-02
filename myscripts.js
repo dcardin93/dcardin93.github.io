@@ -265,7 +265,62 @@ function RemoveChilds() {
 function IntDatos() {
 	var div = document.getElementById('DatosInt');
 	var tiempo = div.getElementsByTagName('input');
-	alert(tiempo[0].value)
+	var tabla = document.getElementById('tabladatos');
+	var vuelta = document.getElementById('VueltaIntro');
+	var asig = document.getElementById('AsigIntro');
+	
+	var dia = new Date().getDate();
+	var mes = new Date().getMonth() + 1;
+	var año = new Date().getFullYear();
+	var arrayfecha = new Array(dia,mes,año);
+	var fecha = arrayfecha.join("/");
+	var hor = new Date().getHours();
+	
+	if (hor <= 9){
+		if (hor == 0){
+			var hora = '00';
+		}
+		else {
+			var horarray = new Array('0',hor);
+			var hora = horarray.join('');
+		}
+	}
+	else {
+		var hora = hor;
+	}
+	
+	var minu = new Date().getMinutes();
+		
+	if (minu <= 9){
+		if (minu == 0){
+			var minut = '00';
+		}
+		else {
+			var minarray = new Array('0',minu);
+			var minut = minarray.join('');
+		}
+	}
+	else {
+		var minut = minu;
+	}		
+		
+	var arraytiempo = new Array(hora,minut);
+	var tiempo = arraytiempo.join(":");
+	var arrayahora = new Array(fecha,tiempo);
+	var ahora = arrayahora.join(" ");
+	
+	var hilera = document.createElement("tr");
+	var celda = document.createElement("td");
+	celda.appendChild(document.createTextNode(ahora));
+	hilera.appendChild(celda);
+	var celda = document.createElement("td");
+	celda.appendChild(document.createTextNode(vuelta.value));
+	hilera.appendChild(celda);
+	var celda = document.createElement("td");
+	celda.appendChild(document.createTextNode(asig.value));
+	hilera.appendChild(celda);
+	
+	
 }
 
 function Buscar () {
