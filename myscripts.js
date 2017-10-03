@@ -303,11 +303,14 @@ function IntDatos() {
 	else {
 		var minut = minu;
 	}		
-		
+
 	var arraytiempo = new Array(hora,minut);
 	var tiempo = arraytiempo.join(":");
 	var arrayahora = new Array(fecha,tiempo);
 	var ahora = arrayahora.join(" ");
+	
+	var arraytiempo = [tiempo[0].toString(),tiempo[1].toString(),tiempo[2].toString()];
+	var tiempo = arraytiempo.join();
 	
 	var hilera = document.createElement("tr");
 	var celda = document.createElement("td");
@@ -319,6 +322,10 @@ function IntDatos() {
 	var celda = document.createElement("td");
 	celda.appendChild(document.createTextNode(asig.value));
 	hilera.appendChild(celda);
+	var celda = document.createElement("td");
+	celda.appendChild(document.createTextNode(tiempo));
+	hilera.appendChild(celda);
+	tabla.appendChild(hilera)
 	
 	
 }
