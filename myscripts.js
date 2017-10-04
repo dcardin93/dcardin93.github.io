@@ -309,7 +309,7 @@ function IntDatos() {
 	var arrayahora = new Array(fecha,tiempo);
 	var ahora = arrayahora.join(" ");
 	
-	var arraytiempo = [tiempo[0].toString(),tiempo[1].toString(),tiempo[2].toString()];
+	var arraytiempo = [tiempo[0].value.toString(),tiempo[1].value.toString(),tiempo[2].value.toString()];
 	var tiempo = arraytiempo.join();
 	
 	var hilera = document.createElement("tr");
