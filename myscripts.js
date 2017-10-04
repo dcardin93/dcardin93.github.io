@@ -309,7 +309,10 @@ function IntDatos() {
 	var arrayahora = new Array(fecha,tiempo);
 	var ahora = arrayahora.join(" ");
 	
-	var arraytiempo = [tiempo[0].value.toString(),tiempo[1].value.toString(),tiempo[2].value.toString()];
+	var tiempo0 = tiempo[0].value
+	var tiempo1 = tiempo[1].value
+	var tiempo2 = tiempo[2].value
+	var arraytiempo = [tiempo0.toString(),tiempo1.toString(),tiempo2.toString()];
 	var tiempo = arraytiempo.join();
 	
 	var hilera = document.createElement("tr");
@@ -325,8 +328,10 @@ function IntDatos() {
 	var celda = document.createElement("td");
 	celda.appendChild(document.createTextNode(tiempo));
 	hilera.appendChild(celda);
-	tabla.appendChild(hilera)
-	
+	tabla.appendChild(hilera);
+	tiempo[0].value = "h"
+	tiempo[1].value = "min"
+	tiempo[2].value = "s"
 	
 }
 
