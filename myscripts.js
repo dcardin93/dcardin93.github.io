@@ -308,6 +308,7 @@ function IntDatos() {
 	var tiempo = arraytiempo.join(":");
 	var arrayahora = new Array(fecha,tiempo);
 	var ahora = arrayahora.join(" ");
+	alert('hey')
 	
 	var tiempo0 = tiempo[0].value;
 	tiempo0 = tiempo0.toString();
