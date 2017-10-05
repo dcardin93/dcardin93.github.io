@@ -335,7 +335,8 @@ function IntDatos() {
 	tiempo[0].value = "h"
 	tiempo[1].value = "min"
 	tiempo[2].value = "s"
-	alert('Datos introducidos')
+	alert('Datos introducidos');
+	SaveData(this);
 	
 }
 
