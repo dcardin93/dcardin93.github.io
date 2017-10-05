@@ -313,14 +313,14 @@ function IntDatos() {
 	var tiempo0 = tiempo[0].value;
 	tiempo0 = tiempo0.toString();
 	alert(tiempo0);
-	var tiempo1 = tiempo[1].value.toString();
+	var tiempo1 = tiempo[1].value;
 	tiempo0 = tiempo1.toString();
 	alert(tiempo1);
-	var tiempo2 = tiempo[2].value.toString();
+	var tiempo2 = tiempo[2].value;
 	tiempo0 = tiempo2.toString();
 	alert(tiempo2);
 	var arraytiempo = [tiempo0,tiempo1,tiempo2];
-	var tiempo = arraytiempo.join(":");
+	var tiempodat = arraytiempo.join(":");
 	
 	var hilera = document.createElement("tr");
 	var celda = document.createElement("td");
@@ -333,12 +333,12 @@ function IntDatos() {
 	celda.appendChild(document.createTextNode(asig.value));
 	hilera.appendChild(celda);
 	var celda = document.createElement("td");
-	celda.appendChild(document.createTextNode(tiempo));
+	celda.appendChild(document.createTextNode(tiempodat));
 	hilera.appendChild(celda);
 	tabla.appendChild(hilera);
-	tiempo[0].value = "h"
-	tiempo[1].value = "min"
-	tiempo[2].value = "s"
+	tiempo[0].value = "h";
+	tiempo[1].value = "min";
+	tiempo[2].value = "s";
 	alert('Datos introducidos');
 	SaveData(this);
 	
