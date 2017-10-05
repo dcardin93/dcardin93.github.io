@@ -309,11 +309,14 @@ function IntDatos() {
 	var arrayahora = new Array(fecha,tiempo);
 	var ahora = arrayahora.join(" ");
 	
-	var tiempo0 = tiempo[0].value.toString();
+	var tiempo0 = tiempo[0].value;
+	tiempo0 = tiempo0.toString();
 	alert(tiempo0);
 	var tiempo1 = tiempo[1].value.toString();
+	tiempo0 = tiempo1.toString();
 	alert(tiempo1);
 	var tiempo2 = tiempo[2].value.toString();
+	tiempo0 = tiempo2.toString();
 	alert(tiempo2);
 	var arraytiempo = [tiempo0,tiempo1,tiempo2];
 	var tiempo = arraytiempo.join(":");
